@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:theme="@style/AppTheme"
+    android:background="@drawable/bck"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_below="@+id/imageView"
+            android:id="@+id/tvHead"
+            android:textSize="20sp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:text="Login Page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/tvHead"
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:hint="Email"
+            app:helperText="e.g karli@yahoo.co.id"
+            app:helperTextEnabled="true"
+            style="@style/TextInputLayout"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:inputType="textEmailAddress"
+                android:textColor="#000"
+                tools:targetApi="jelly_bean" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/name"
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:hint="Password"
+            app:helperText="e.g 123as12"
+            app:helperTextEnabled="true"
+            style="@style/TextInputLayout"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:textColor="#000"
+                android:fontFamily="@font/roboto"
+                tools:targetApi="jelly_bean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:textStyle="italic"
+            android:layout_below="@+id/pass"
+            android:fontFamily="@font/roboto"
+            android:id="@+id/tvForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Forgot Password"
+            android:layout_alignEnd="@id/pass"
+            android:layout_alignRight="@id/pass" />
+        <Button
+            android:layout_below="@+id/tvForgot"
+            android:background="@drawable/button_orange_fade"
+            android:padding="10dp"
+            android:id="@+id/btMasuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:fontFamily="@font/roboto"
+            android:text="Login"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_below="@+id/btMasuk"
+            android:fontFamily="@font/roboto"
+            android:id="@+id/tvDaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Don't Have Account Yet ? Register"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</ScrollView>
